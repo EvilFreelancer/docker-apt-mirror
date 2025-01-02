@@ -1,0 +1,38 @@
+# set base_path         /var/spool/apt-mirror
+# set mirror_path       $base_path/mirror
+# set skel_path         $base_path/skel
+# set var_path          $base_path/var
+# set cleanscript       $var_path/clean.sh
+# set defaultarch       <running host architecture>
+
+set postmirror_script /app/postmirror.sh
+set run_postmirror    1
+
+set nthreads 20
+set _tilde   0
+
+############
+
+#deb https://developer.download.nvidia.com/compute/cuda/repos/debian10/x86_64/ /
+#deb https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64/ /
+deb https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /
+
+deb https://nvidia.github.io/libnvidia-container/stable/deb/amd64 /
+deb https://nvidia.github.io/libnvidia-container/stable/debian8/amd64 /
+deb https://nvidia.github.io/libnvidia-container/stable/debian9/amd64 /
+deb https://nvidia.github.io/libnvidia-container/stable/debian10/amd64 /
+
+deb https://nvidia.github.io/libnvidia-container/experimental/deb/amd64 /
+deb https://nvidia.github.io/libnvidia-container/experimental/debian9/amd64 /
+deb https://nvidia.github.io/libnvidia-container/experimental/debian10/amd64 /
+#deb https://nvidia.github.io/libnvidia-container/experimental/debian11/amd64 /
+
+deb https://download.docker.com/linux/debian buster stable
+deb https://download.docker.com/linux/debian bullseye stable
+deb https://download.docker.com/linux/debian bookworm stable
+
+############
+
+clean https://developer.download.nvidia.com
+clean https://nvidia.github.io
+clean https://download.docker.com
