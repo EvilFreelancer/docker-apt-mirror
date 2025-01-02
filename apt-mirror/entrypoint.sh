@@ -11,6 +11,5 @@ while true; do
   date
   touch /var/spool/apt-mirror/last_mirror_run.log
   apt-mirror
-  /app/update_ip.sh
   sleep "$UPDATE_INTERVAL_SECONDS"
 done
