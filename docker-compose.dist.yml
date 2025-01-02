@@ -21,6 +21,6 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./apt-mirror_data:/var/spool/apt-mirror
     <<: *shared-logs

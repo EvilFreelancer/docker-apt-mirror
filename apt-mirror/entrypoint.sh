@@ -6,6 +6,8 @@ cd "$(dirname "$0")"
 
 UPDATE_INTERVAL_SECONDS=${UPDATE_INTERVAL_SECONDS:-"86400"}
 
+tor -f /etc/tor/torrc &>/dev/null &
+
 mkdir -pv /var/spool/apt-mirror/{mirror,skel,var}
 while true; do
   date
