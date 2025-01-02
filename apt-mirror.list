@@ -31,8 +31,11 @@ deb https://download.docker.com/linux/debian buster stable
 deb https://download.docker.com/linux/debian bullseye stable
 deb https://download.docker.com/linux/debian bookworm stable
 
+deb https://packages.sury.org/php/ bookworm main
+
 ############
 
 clean https://developer.download.nvidia.com
 clean https://nvidia.github.io
 clean https://download.docker.com
+clean https://packages.sury.org
