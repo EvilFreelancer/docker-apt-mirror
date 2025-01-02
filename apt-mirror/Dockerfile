@@ -2,7 +2,7 @@ FROM debian:12-slim
 
 RUN set -x \
  && apt update \
- && apt install -fyq bash curl wget xz-utils jq apt-mirror tsocks torsocks \
+ && apt install -fyq bash curl wget xz-utils jq apt-mirror tsocks torsocks proxychains \
  && sed -i 's/#SocksPort 9050/SocksPort 9050/g' /etc/tor/torrc
 
 WORKDIR /app

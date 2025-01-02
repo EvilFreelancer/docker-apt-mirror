@@ -11,6 +11,9 @@ services:
     network_mode: host
     build:
       context: ./apt-mirror
+    #environment:
+    #  http_proxy: http://proxy.example.com:8080
+    #  https_proxy: http://proxy.example.com:8080
     volumes:
       - ./apt-mirror.list:/etc/apt/mirror.list
       - ./apt-mirror_data:/var/spool/apt-mirror
