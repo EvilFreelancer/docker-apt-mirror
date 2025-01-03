@@ -13,27 +13,34 @@ set _tilde   0
 
 ############
 
+# ~50Gb each
 #deb https://developer.download.nvidia.com/compute/cuda/repos/debian10/x86_64/ /
 #deb https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64/ /
 deb https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /
 
+# ~40Mb each
 deb https://nvidia.github.io/libnvidia-container/stable/deb/amd64 /
 deb https://nvidia.github.io/libnvidia-container/stable/debian8/amd64 /
 deb https://nvidia.github.io/libnvidia-container/stable/debian9/amd64 /
 deb https://nvidia.github.io/libnvidia-container/stable/debian10/amd64 /
-
 deb https://nvidia.github.io/libnvidia-container/experimental/deb/amd64 /
 deb https://nvidia.github.io/libnvidia-container/experimental/debian9/amd64 /
 deb https://nvidia.github.io/libnvidia-container/experimental/debian10/amd64 /
 #deb https://nvidia.github.io/libnvidia-container/experimental/debian11/amd64 /
 
+# ~15Gb
 deb https://download.docker.com/linux/debian buster stable
 deb https://download.docker.com/linux/debian bullseye stable
 deb https://download.docker.com/linux/debian bookworm stable
 
+# ~2Gb
 deb https://packages.sury.org/php/ bookworm main
+
+# ~5Gb
 deb http://ppa.launchpad.net/ansible/ansible/ubuntu/ jammy main
-deb https://apt.releases.hashicorp.com bookworm main
+
+# ~129Gb
+#deb https://apt.releases.hashicorp.com bookworm main
 
 ############
 
@@ -42,4 +49,4 @@ clean https://nvidia.github.io
 clean https://download.docker.com
 clean https://packages.sury.org
 clean http://ppa.launchpad.net
-clean https://apt.releases.hashicorp.com
+#clean https://apt.releases.hashicorp.com
