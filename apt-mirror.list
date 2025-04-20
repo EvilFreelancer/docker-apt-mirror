@@ -23,24 +23,40 @@ deb https://nvidia.github.io/libnvidia-container/stable/deb/amd64 /
 deb https://nvidia.github.io/libnvidia-container/stable/debian8/amd64 /
 deb https://nvidia.github.io/libnvidia-container/stable/debian9/amd64 /
 deb https://nvidia.github.io/libnvidia-container/stable/debian10/amd64 /
-deb https://nvidia.github.io/libnvidia-container/experimental/deb/amd64 /
-deb https://nvidia.github.io/libnvidia-container/experimental/debian9/amd64 /
-deb https://nvidia.github.io/libnvidia-container/experimental/debian10/amd64 /
+deb https://nvidia.github.io/libnvidia-container/stable/debian11/amd64 /
+#deb https://nvidia.github.io/libnvidia-container/experimental/deb/amd64 /
+#deb https://nvidia.github.io/libnvidia-container/experimental/debian9/amd64 /
+#deb https://nvidia.github.io/libnvidia-container/experimental/debian10/amd64 /
 #deb https://nvidia.github.io/libnvidia-container/experimental/debian11/amd64 /
 
-# ~15Gb
-deb https://download.docker.com/linux/debian buster stable
-deb https://download.docker.com/linux/debian bullseye stable
-deb https://download.docker.com/linux/debian bookworm stable
+# ~16Gb total (~5Gb each)
+deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+deb [arch=amd64] https://download.docker.com/linux/debian bullseye stable
+deb [arch=amd64] https://download.docker.com/linux/debian bookworm stable
 
 # ~2Gb
-deb https://packages.sury.org/php/ bookworm main
+deb [arch=amd64] https://packages.sury.org/php/ bookworm main
 
 # ~5Gb
-deb http://ppa.launchpad.net/ansible/ansible/ubuntu/ jammy main
+deb [arch=amd64] http://ppa.launchpad.net/ansible/ansible/ubuntu/ jammy main
 
 # ~129Gb
-#deb https://apt.releases.hashicorp.com bookworm main
+# deb [arch=amd64] https://apt.releases.hashicorp.com bookworm main
+
+# ~1000Gb
+# deb https://apt.repos.intel.com/oneapi all main
+
+# ~1Gb
+deb [arch=amd64] https://ppa.launchpadcontent.net/kobuk-team/intel-graphics/ubuntu/ devel main
+
+# ~2.2Gb
+deb [arch=amd64] https://repositories.intel.com/gpu/ubuntu jammy unified
+
+# ~8Gb
+deb [arch=amd64] https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu devel main
+
+# ~400Mb
+deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
 
 ############
 
@@ -49,4 +65,8 @@ clean https://nvidia.github.io
 clean https://download.docker.com
 clean https://packages.sury.org
 clean http://ppa.launchpad.net
-#clean https://apt.releases.hashicorp.com
+clean https://apt.releases.hashicorp.com
+clean https://apt.repos.intel.com
+clean https://ppa.launchpadcontent.net
+clean https://repositories.intel.com
+clean https://dl.google.com
